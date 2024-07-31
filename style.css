@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif; 
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.input_form, .account {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.3);
+}
+
+.input_form input, .account input {
+
+    margin: 5px;
+    padding: 8px;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+}
+
+.input_form button, .account button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.account {
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    background-color: transparent;
+    /* border: 1px solid #ccc; */
+    backdrop-filter: blur(10px);
+}
+
+.myaccount{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account h4 {
+    margin: 0 0 10px 0;
+}
+
+.account div{
+    /* background: red; */
+    width: 30%;
+}
+.account span{
+    /* background: blue; */
+    width: 70%;
+}
+
+.account .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.account_list {
+    list-style: none;
+    padding: 0;
+}
+
+button:hover{
+    background: #333;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .input_form, .account{
+        border: none;
+    }
+
+    .account div, .account span {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 0;
+        font-size: 14px;
+    }
+    .input_form{
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_form, .account {
+        padding: 10px;
+    }
+
+    .input_form input, .account input {
+        padding: 6px;
+        width: 95%;
+    }
+
+    .input_form button, .account button {
+        padding: 6px 10px;
+    }
+}
